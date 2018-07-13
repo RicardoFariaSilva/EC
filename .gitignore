@@ -1,4 +1,5 @@
-EPEconomia/build/
-EPEconomia/nbproject/
+EPEconomia/build/..
+EPEconomia/nbproject/..
 EPEconomia/build.xml
 EPEconomia/manifest.mf
+*.class

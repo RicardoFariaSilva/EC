@@ -39,9 +39,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
               <Component id="btnISLM" min="-2" pref="200" max="-2" attributes="0"/>
-              <EmptySpace pref="204" max="32767" attributes="0"/>
-              <Component id="btnCalc" min="-2" pref="200" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+              <EmptySpace min="113" pref="517" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -51,10 +49,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lblTitulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnISLM" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="btnCalc" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btnISLM" min="-2" pref="100" max="-2" attributes="0"/>
               <EmptySpace pref="339" max="32767" attributes="0"/>
               <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -85,14 +80,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnCalc">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Calculadora"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCalcActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

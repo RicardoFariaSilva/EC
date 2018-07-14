@@ -17,7 +17,7 @@ public class TelaOD extends javax.swing.JFrame {
     /** Creates new form TelaOD */
     public TelaOD() {
         initComponents();
-        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/padrão.jpg"));
+        jLabel3.setIcon(new ImageIcon("imgs/ofertademanda/padrão.jpg"));
     }
 
     /** This method is called from within the constructor to
@@ -164,22 +164,22 @@ public class TelaOD extends javax.swing.JFrame {
 
     private void btnMaisDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaisDemandaActionPerformed
         // TODO add your handling code here:
-        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/deSobe.jpg"));
+        jLabel3.setIcon(new ImageIcon("imgs/ofertademanda/deSobe.jpg"));
     }//GEN-LAST:event_btnMaisDemandaActionPerformed
 
     private void btnMenosOfertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosOfertaActionPerformed
         // TODO add your handling code here:
-        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/ofDesce.jpg"));
+        jLabel3.setIcon(new ImageIcon("imgs/ofertademanda/ofDesce.jpg"));
     }//GEN-LAST:event_btnMenosOfertaActionPerformed
 
     private void btnMaisOfertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaisOfertaActionPerformed
         // TODO add your handling code here:
-        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/ofSobe.jpg"));
+        jLabel3.setIcon(new ImageIcon("imgs/ofertademanda/ofSobe.jpg"));
     }//GEN-LAST:event_btnMaisOfertaActionPerformed
 
     private void btnMenosDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosDemandaActionPerformed
         // TODO add your handling code here:
-        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/deDesce.jpg"));
+        jLabel3.setIcon(new ImageIcon("imgs/ofertademanda/deDesce.jpg"));
     }//GEN-LAST:event_btnMenosDemandaActionPerformed
 
     /**

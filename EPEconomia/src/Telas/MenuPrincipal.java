@@ -5,6 +5,9 @@
  */
 package Telas;
 
+import java.text.DecimalFormat;
+import javax.swing.*;
+
 /**
  *
  * @author 0dr4c1r
@@ -30,6 +33,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnMicro = new javax.swing.JToggleButton();
         btnMacro = new javax.swing.JToggleButton();
         lblTitulo = new javax.swing.JLabel();
+        btnCalc = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +54,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblTitulo.setText("Macroeconomia");
 
+        btnCalc.setText("<html>\n<center>\nCalculadora de retorno de<br>\ninvestimento em tesouro direto\n</center>\n</html>");
+        btnCalc.setActionCommand("<html>\n      Calculadora de retorno de<br>\n investimento em tesouro direto\n</html>");
+        btnCalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,6 +77,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lblTitulo)
                         .addGap(263, 263, 263))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(btnCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,7 +91,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMacro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMicro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(328, Short.MAX_VALUE))
+                .addGap(63, 63, 63)
+                .addComponent(btnCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         pack();
@@ -85,7 +103,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnMacroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMacroActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        
+
         TelaMacro telaMacro = new TelaMacro();
         telaMacro.setVisible(true);
     }//GEN-LAST:event_btnMacroActionPerformed
@@ -93,10 +111,52 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnMicroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMicroActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        
+
         TelaMicro telaMicro = new TelaMicro();
         telaMicro.setVisible(true);
     }//GEN-LAST:event_btnMicroActionPerformed
+
+    private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
+        // TODO add your handling code here:
+        JTextField inAporte = new JTextField(5);
+        JTextField inPrazo = new JTextField(5);
+        JTextField inTaxaSelic = new JTextField(5);
+
+        JPanel myPanel = new JPanel();
+        myPanel.add(new JLabel("Valor investido: R$"));
+        myPanel.add(inAporte);
+        myPanel.add(Box.createHorizontalStrut(15)); // a spacer
+        myPanel.add(new JLabel("Prazo:"));
+        myPanel.add(inPrazo);
+        myPanel.add(new JLabel("ano(s)"));
+        myPanel.add(Box.createHorizontalStrut(15));
+        myPanel.add(new JLabel("Taxa Selic:"));
+        myPanel.add(inTaxaSelic);
+        myPanel.add(new JLabel("%"));
+
+        double aporte = 0;
+        double prazo = 0;
+        double saldoFinal = 0;
+        double taxaSelic = 0;
+
+        try {
+            int result = JOptionPane.showConfirmDialog(null, myPanel,
+                    "Calculadora de Tesouro Direto", JOptionPane.OK_CANCEL_OPTION);
+            if (result == JOptionPane.OK_OPTION) {
+                aporte = Double.parseDouble(inAporte.getText());
+                prazo = Double.parseDouble(inPrazo.getText());
+                taxaSelic = Double.parseDouble(inTaxaSelic.getText());
+                saldoFinal = aporte;
+            }
+
+            for (int i = 0; i < prazo; i++) {
+                saldoFinal += saldoFinal * (taxaSelic / 100);
+            }
+            JOptionPane.showMessageDialog(null, "Saldo final: R$" + new DecimalFormat("##.##").format(saldoFinal));
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Formato inválido! Insira novamente com apenas números separados por ponto.");
+        }
+    }//GEN-LAST:event_btnCalcActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,6 +194,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalc;
     private javax.swing.JToggleButton btnMacro;
     private javax.swing.JToggleButton btnMicro;
     private javax.swing.JLabel lblTitulo;

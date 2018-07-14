@@ -19,7 +19,7 @@ public class TelaISLM extends javax.swing.JFrame {
      */
     public TelaISLM() {
         initComponents();
-        jLabel2.setIcon(new ImageIcon("src/imgs/islm/equilibrio.png"));
+        jLabel2.setIcon(new ImageIcon("imgs/islm/equilibrio.png"));
     }
 
     /**
@@ -173,7 +173,7 @@ public class TelaISLM extends javax.swing.JFrame {
 
     private void btnContraçãoFiscalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContraçãoFiscalActionPerformed
         // TODO add your handling code here:
-        jLabel2.setIcon(new ImageIcon("src/imgs/islm/contracao_fiscal.png"));
+        jLabel2.setIcon(new ImageIcon("imgs/islm/contracao_fiscal.png"));
     }//GEN-LAST:event_btnContraçãoFiscalActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
@@ -186,17 +186,17 @@ public class TelaISLM extends javax.swing.JFrame {
 
     private void btnExpansãoFiscalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExpansãoFiscalActionPerformed
         // TODO add your handling code here:
-        jLabel2.setIcon(new ImageIcon("src/imgs/islm/expansao_fiscal.png"));
+        jLabel2.setIcon(new ImageIcon("imgs/islm/expansao_fiscal.png"));
     }//GEN-LAST:event_btnExpansãoFiscalActionPerformed
 
     private void btnContracaoMonetariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContracaoMonetariaActionPerformed
         // TODO add your handling code here:
-        jLabel2.setIcon(new ImageIcon("src/imgs/islm/contracao_monetaria.png"));
+        jLabel2.setIcon(new ImageIcon("imgs/islm/contracao_monetaria.png"));
     }//GEN-LAST:event_btnContracaoMonetariaActionPerformed
 
     private void btnExpansaoMonetariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExpansaoMonetariaActionPerformed
         // TODO add your handling code here:
-        jLabel2.setIcon(new ImageIcon("src/imgs/islm/expansao_monetaria.png"));
+        jLabel2.setIcon(new ImageIcon("imgs/islm/expansao_monetaria.png"));
     }//GEN-LAST:event_btnExpansaoMonetariaActionPerformed
 
     /**

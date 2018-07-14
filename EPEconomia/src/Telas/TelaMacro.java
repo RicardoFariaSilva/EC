@@ -30,7 +30,7 @@ public class TelaMacro extends javax.swing.JFrame {
         lblTitulo = new javax.swing.JLabel();
         btnISLM = new javax.swing.JButton();
         btnVoltar = new javax.swing.JToggleButton();
-        btnISLM1 = new javax.swing.JButton();
+        btnCalc = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,10 +38,25 @@ public class TelaMacro extends javax.swing.JFrame {
         lblTitulo.setText("Macroeconomia");
 
         btnISLM.setText("ISLM");
+        btnISLM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnISLMActionPerformed(evt);
+            }
+        });
 
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
-        btnISLM1.setText("Calculadora");
+        btnCalc.setText("Calculadora");
+        btnCalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -60,7 +75,7 @@ public class TelaMacro extends javax.swing.JFrame {
                 .addGap(83, 83, 83)
                 .addComponent(btnISLM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
-                .addComponent(btnISLM1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(113, 113, 113))
         );
         layout.setVerticalGroup(
@@ -71,7 +86,7 @@ public class TelaMacro extends javax.swing.JFrame {
                 .addGap(267, 267, 267)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnISLM, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnISLM1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 339, Short.MAX_VALUE)
                 .addComponent(btnVoltar)
                 .addContainerGap())
@@ -80,6 +95,26 @@ public class TelaMacro extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnISLMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnISLMActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        TelaISLM islm = new TelaISLM();
+        islm.setVisible(true);
+    }//GEN-LAST:event_btnISLMActionPerformed
+
+    private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        MenuPrincipal menu = new MenuPrincipal();
+        menu.setVisible(true);
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,8 +152,8 @@ public class TelaMacro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalc;
     private javax.swing.JButton btnISLM;
-    private javax.swing.JButton btnISLM1;
     private javax.swing.JToggleButton btnVoltar;
     private javax.swing.JLabel lblTitulo;
     // End of variables declaration//GEN-END:variables

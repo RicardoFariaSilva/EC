@@ -34,8 +34,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnMicro.setText("MICRO");
+        btnMicro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMicroActionPerformed(evt);
+            }
+        });
 
         btnMacro.setText("MACRO");
+        btnMacro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMacroActionPerformed(evt);
+            }
+        });
 
         lblTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblTitulo.setText("Macroeconomia");
@@ -71,6 +81,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMacroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMacroActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        TelaMacro telaMacro = new TelaMacro();
+        telaMacro.setVisible(true);
+    }//GEN-LAST:event_btnMacroActionPerformed
+
+    private void btnMicroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMicroActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        TelaMicro telaMicro = new TelaMicro();
+        telaMicro.setVisible(true);
+    }//GEN-LAST:event_btnMicroActionPerformed
 
     /**
      * @param args the command line arguments

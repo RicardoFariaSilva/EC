@@ -6,6 +6,8 @@
 
 package Telas;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author 0dr4c1r
@@ -15,6 +17,7 @@ public class TelaOD extends javax.swing.JFrame {
     /** Creates new form TelaOD */
     public TelaOD() {
         initComponents();
+        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/padrão.jpg"));
     }
 
     /** This method is called from within the constructor to
@@ -35,6 +38,7 @@ public class TelaOD extends javax.swing.JFrame {
         btnMenosDemanda = new javax.swing.JToggleButton();
         btnVoltar = new javax.swing.JToggleButton();
         painelGrafico = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,25 +51,50 @@ public class TelaOD extends javax.swing.JFrame {
         lblOferta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblOferta.setText("Oferta");
 
-        btnMaisOferta.setText("-");
+        btnMaisOferta.setText("+");
+        btnMaisOferta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMaisOfertaActionPerformed(evt);
+            }
+        });
 
-        btnMenosOferta.setText("+");
+        btnMenosOferta.setText("-");
+        btnMenosOferta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenosOfertaActionPerformed(evt);
+            }
+        });
 
-        btnMaisDemanda.setText("-");
+        btnMaisDemanda.setText("+");
+        btnMaisDemanda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMaisDemandaActionPerformed(evt);
+            }
+        });
 
-        btnMenosDemanda.setText("+");
+        btnMenosDemanda.setText("-");
+        btnMenosDemanda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenosDemandaActionPerformed(evt);
+            }
+        });
 
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelGraficoLayout = new javax.swing.GroupLayout(painelGrafico);
         painelGrafico.setLayout(painelGraficoLayout);
         painelGraficoLayout.setHorizontalGroup(
             painelGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 601, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
         );
         painelGraficoLayout.setVerticalGroup(
             painelGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 502, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -73,35 +102,31 @@ public class TelaOD extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(278, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(painelGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 197, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblTitulo)
-                                .addGap(240, 240, 240))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnVoltar)
-                                .addContainerGap())
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(btnMaisDemanda)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblOferta, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnMenosDemanda))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(btnMaisOferta)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnMenosOferta)))
-                                .addGap(293, 293, 293))))))
+                        .addComponent(lblTitulo)
+                        .addGap(240, 240, 240))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnVoltar)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnMaisDemanda)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnMenosDemanda)
+                        .addGap(293, 293, 293))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnMaisOferta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblOferta, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnMenosOferta)
+                        .addGap(293, 293, 293))))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(painelGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,16 +135,16 @@ public class TelaOD extends javax.swing.JFrame {
                 .addComponent(lblTitulo)
                 .addGap(35, 35, 35)
                 .addComponent(painelGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMaisDemanda)
-                    .addComponent(btnMenosDemanda)
-                    .addComponent(lblOferta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblOferta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMaisOferta)
+                    .addComponent(btnMenosOferta))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(btnMaisOferta)
-                    .addComponent(btnMenosOferta))
+                    .addComponent(btnMaisDemanda)
+                    .addComponent(btnMenosDemanda))
                 .addGap(17, 17, 17)
                 .addComponent(btnVoltar)
                 .addContainerGap())
@@ -128,6 +153,34 @@ public class TelaOD extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        TelaMicro telaMicro = new TelaMicro();
+        telaMicro.setVisible(true);
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnMaisDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaisDemandaActionPerformed
+        // TODO add your handling code here:
+        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/deSobe.jpg"));
+    }//GEN-LAST:event_btnMaisDemandaActionPerformed
+
+    private void btnMenosOfertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosOfertaActionPerformed
+        // TODO add your handling code here:
+        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/ofDesce.jpg"));
+    }//GEN-LAST:event_btnMenosOfertaActionPerformed
+
+    private void btnMaisOfertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaisOfertaActionPerformed
+        // TODO add your handling code here:
+        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/ofSobe.jpg"));
+    }//GEN-LAST:event_btnMaisOfertaActionPerformed
+
+    private void btnMenosDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosDemandaActionPerformed
+        // TODO add your handling code here:
+        jLabel3.setIcon(new ImageIcon("src/imgs/ofertademanda/deDesce.jpg"));
+    }//GEN-LAST:event_btnMenosDemandaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,6 +224,7 @@ public class TelaOD extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnMenosOferta;
     private javax.swing.JToggleButton btnVoltar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblOferta;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel painelGrafico;

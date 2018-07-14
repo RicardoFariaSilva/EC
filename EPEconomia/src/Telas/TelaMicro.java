@@ -38,10 +38,25 @@ public class TelaMicro extends javax.swing.JFrame {
         lblTitulo.setText("Microeconomia");
 
         btnOD.setText("Oferta e Demanda");
+        btnOD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnODActionPerformed(evt);
+            }
+        });
 
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
         btnElasticidade.setText("Elasticidade de preço");
+        btnElasticidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnElasticidadeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +95,30 @@ public class TelaMicro extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        MenuPrincipal menu = new MenuPrincipal();
+        menu.setVisible(true);
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnODActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnODActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        TelaOD telaOD = new TelaOD();
+        telaOD.setVisible(true);
+    }//GEN-LAST:event_btnODActionPerformed
+
+    private void btnElasticidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElasticidadeActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        TelaElasticidade telaElasticidade = new TelaElasticidade();
+        telaElasticidade.setVisible(true);
+    }//GEN-LAST:event_btnElasticidadeActionPerformed
 
     /**
      * @param args the command line arguments

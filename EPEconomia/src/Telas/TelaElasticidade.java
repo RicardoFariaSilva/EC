@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author 0dr4c1r
@@ -16,6 +18,8 @@ public class TelaElasticidade extends javax.swing.JFrame {
      */
     public TelaElasticidade() {
         initComponents();
+        
+        
     }
 
     /**
@@ -34,6 +38,9 @@ public class TelaElasticidade extends javax.swing.JFrame {
         dropOferta = new javax.swing.JComboBox<>();
         btnVoltar = new javax.swing.JToggleButton();
         painelGrafico = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,21 +54,51 @@ public class TelaElasticidade extends javax.swing.JFrame {
         lblOferta.setText("Oferta:");
 
         dropDemanda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Igual à 0", "Menor que 1", "Igual à 1", "Maior que 1", "Igual ao infinito" }));
+        dropDemanda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dropDemandaActionPerformed(evt);
+            }
+        });
 
         dropOferta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Igual à 0", "Menor que 1", "Igual à 1", "Maior que 1", "Igual ao infinito" }));
 
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelGraficoLayout = new javax.swing.GroupLayout(painelGrafico);
         painelGrafico.setLayout(painelGraficoLayout);
         painelGraficoLayout.setHorizontalGroup(
             painelGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 601, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelGraficoLayout.createSequentialGroup()
+                .addContainerGap(190, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(245, 245, 245))
         );
         painelGraficoLayout.setVerticalGroup(
             painelGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 502, Short.MAX_VALUE)
+            .addGroup(painelGraficoLayout.createSequentialGroup()
+                .addGap(181, 181, 181)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(258, Short.MAX_VALUE))
         );
+
+        jButton1.setText("Gerar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Gerar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,10 +124,14 @@ public class TelaElasticidade extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(dropDemanda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(dropOferta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(273, 273, 273))))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton1)
+                                    .addComponent(jButton2))
+                                .addGap(182, 182, 182))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(painelGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 205, Short.MAX_VALUE))))
+                        .addGap(0, 239, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,14 +140,16 @@ public class TelaElasticidade extends javax.swing.JFrame {
                 .addComponent(lblTitulo)
                 .addGap(26, 26, 26)
                 .addComponent(painelGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDemanda, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dropDemanda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dropDemanda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblOferta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dropOferta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dropOferta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
                 .addGap(34, 34, 34)
                 .addComponent(btnVoltar)
                 .addContainerGap())
@@ -115,6 +158,64 @@ public class TelaElasticidade extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void dropDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropDemandaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dropDemandaActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        
+        TelaMicro telaMicro = new TelaMicro();
+        telaMicro.setVisible(true);
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int selecionado = dropDemanda.getSelectedIndex();
+        
+        switch(selecionado){
+            case 0:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EDigual_0.jpg"));
+                break;
+            case 1:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EDmenor_1.jpg"));
+                break;
+            case 2:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EDigual_1.jpg"));
+                break;
+            case 3:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EDmaior_1.jpg"));
+                break;
+            case 4:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EDinfinito.jpg"));
+                break;
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int selecionado = dropOferta.getSelectedIndex();
+        
+        switch(selecionado){
+            case 0:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EOigual_0.jpg"));
+                break;
+            case 1:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EOmenor_1.jpg"));
+                break;
+            case 2:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EOigual_1.jpg"));
+                break;
+            case 3:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EOmaior_1.jpg"));
+                break;
+            case 4:
+                jLabel1.setIcon(new ImageIcon("src/imgs/elasticidade/EOinfinito.jpg"));
+                break;
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,6 +256,9 @@ public class TelaElasticidade extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnVoltar;
     private javax.swing.JComboBox<String> dropDemanda;
     private javax.swing.JComboBox<String> dropOferta;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblDemanda;
     private javax.swing.JLabel lblOferta;
     private javax.swing.JLabel lblTitulo;

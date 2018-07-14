@@ -23,15 +23,25 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="275" max="32767" attributes="0"/>
-              <Component id="lblTitulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="lblTitulo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-              <Component id="btnOD" min="-2" pref="200" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+              <Component id="btnISLM" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace pref="204" max="32767" attributes="0"/>
+              <Component id="btnISLM1" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -40,9 +50,14 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lblTitulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
-              <Component id="btnOD" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace pref="486" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnISLM" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="btnISLM1" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="339" max="32767" attributes="0"/>
+              <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,9 +71,19 @@
         <Property name="text" type="java.lang.String" value="Macroeconomia"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnOD">
+    <Component class="javax.swing.JButton" name="btnISLM">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Oferta e Demanda"/>
+        <Property name="text" type="java.lang.String" value="ISLM"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="btnVoltar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Voltar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnISLM1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculadora"/>
       </Properties>
     </Component>
   </SubComponents>

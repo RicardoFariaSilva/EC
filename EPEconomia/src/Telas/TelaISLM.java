@@ -27,21 +27,118 @@ public class TelaISLM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTitulo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        lblOferta = new javax.swing.JLabel();
+        btnContracaoMonetaria = new javax.swing.JToggleButton();
+        btnExpansaoMonetaria = new javax.swing.JToggleButton();
+        btnContraçãoFiscal = new javax.swing.JToggleButton();
+        btnExpansãoFiscal = new javax.swing.JToggleButton();
+        painelGrafico = new javax.swing.JPanel();
+        btnVoltar = new javax.swing.JToggleButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lblTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblTitulo.setText("ISLM");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("Política monetária");
+
+        lblOferta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblOferta.setText("Política fiscal");
+
+        btnContracaoMonetaria.setText("Contração");
+
+        btnExpansaoMonetaria.setText("Expansão");
+
+        btnContraçãoFiscal.setText("Contração");
+        btnContraçãoFiscal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContraçãoFiscalActionPerformed(evt);
+            }
+        });
+
+        btnExpansãoFiscal.setText("Expansão");
+
+        javax.swing.GroupLayout painelGraficoLayout = new javax.swing.GroupLayout(painelGrafico);
+        painelGrafico.setLayout(painelGraficoLayout);
+        painelGraficoLayout.setHorizontalGroup(
+            painelGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 601, Short.MAX_VALUE)
+        );
+        painelGraficoLayout.setVerticalGroup(
+            painelGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 502, Short.MAX_VALUE)
+        );
+
+        btnVoltar.setText("Voltar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(painelGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(287, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(lblTitulo)
+                                .addGap(350, 350, 350))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnContraçãoFiscal)
+                                    .addComponent(btnContracaoMonetaria))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(lblOferta)
+                                        .addGap(27, 27, 27)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnExpansãoFiscal)
+                                    .addComponent(btnExpansaoMonetaria))
+                                .addGap(244, 244, 244))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnVoltar)
+                                .addContainerGap())))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTitulo)
+                .addGap(28, 28, 28)
+                .addComponent(painelGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnContraçãoFiscal)
+                    .addComponent(btnExpansãoFiscal)
+                    .addComponent(lblOferta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(btnContracaoMonetaria)
+                    .addComponent(btnExpansaoMonetaria))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(btnVoltar)
+                .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnContraçãoFiscalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContraçãoFiscalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnContraçãoFiscalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +176,14 @@ public class TelaISLM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btnContracaoMonetaria;
+    private javax.swing.JToggleButton btnContraçãoFiscal;
+    private javax.swing.JToggleButton btnExpansaoMonetaria;
+    private javax.swing.JToggleButton btnExpansãoFiscal;
+    private javax.swing.JToggleButton btnVoltar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblOferta;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JPanel painelGrafico;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,3 +4,5 @@ EPEconomia/build.xml
 EPEconomia/manifest.mf
 *.class
 /EPEconomia/dist/
+/EPEconomia/nbproject/private/
+/EPEconomia/build/
